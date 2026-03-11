@@ -1,52 +1,45 @@
-# PDF Page Extractor by Name List
+# 🚀 EXPDF-Filter Pro (PEF)
 
-This Python utility automates the process of filtering and extracting specific pages from large PDF documents based on a list of names provided in an Excel file.
+**EXPDF-Filter Pro** is a modern, high-performance desktop application designed to automate the extraction of specific pages from large PDF documents based on criteria defined in an Excel spreadsheet.
 
-## 🚀 Features
-* **Automated Filtering:** Quickly scans through hundreds of PDF pages.
-* **Excel Integration:** Reads search terms directly from an `.xlsx` or `.xls` file.
-* **Smart Detection:** Automatically identifies the "Name" column (case-insensitive).
-* **Duplicate Prevention:** Ensures each matching page is only added once to the final result.
-* **Graphical Interface (GUI):** Easy-to-use pop-up windows to select your files.
+Whether you need to filter 700+ pages by Name, ID, or Serial Number, this tool handles the heavy lifting with a clean, professional user interface.
 
 ---
 
-## 🛠️ Prerequisites
-
-Before running the script, ensure you have the required libraries installed:
-
-```bash
-pip install pandas openpyxl PyPDF2
-```
-📂 Project Structure
-
-To run the script successfully, organize your files as follows:
-```bash
-project-folder/
-├── extract_pdf.py    # The Python script (GUI version)
-├── document.pdf      # Your source PDF file
-└── list.xlsx         # Excel file containing a 'Name' column
-```
-
-## 💻 How to Use
-* Run the script: Execute python extract_pdf.py in your terminal or IDE.
-
-* Select Source: A window will pop up asking you to select your Source PDF.
-
-* Select List: Another window will ask for your Excel file containing the names.
-
-* Save Result: Choose where you want to save the generated PDF and give it a name.
-
-* Confirmation: A success message will appear showing how many pages were matched and extracted.
+## ✨ Features
+* **Modern UI:** Built with a sleek Dark Mode interface using `CustomTkinter`.
+* **Smart Column Detection:** Automatically reads your Excel file and lets you choose which column to use for filtering.
+* **Multi-Threaded Processing:** Handles large PDFs (hundreds of pages) without freezing or crashing.
+* **Real-time Progress:** Visual progress bar and page counter to track the extraction.
+* **Zero Installation for Users:** Compiled into a standalone `.exe` (no Python required for the end-user).
 
 ---
 
-##  ⚠️ Important Notes
-* Text Recognition: The PDF must contain selectable text. Scanned images without OCR (Optical Character Recognition) cannot be read by this script.
+## 🛠️ Built With
+This software was developed using the following technologies:
+* **Language:** [Python 3.x](https://www.python.org/)
+* **UI Framework:** [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) (Modernized Tkinter)
+* **PDF Logic:** [PyPDF2](https://pypi.org/project/PyPDF2/) (Reading and Writing PDF streams)
+* **Data Handling:** [Pandas](https://pandas.pydata.org/) & [Openpyxl](https://openpyxl.readthedocs.io/) (Excel processing)
+* **Concurrency:** `Threading` library for background task management.
+* **Compilation:** [PyInstaller](https://pyinstaller.org/) (Executable bundling).
 
-* Column Headers: Ensure your Excel sheet has a header named "Name" or "name".
+---
 
-  ---
+## 🚀 How It Works
 
-##  📜 License
-* This project is open-source and free to use.
+
+
+1.  **Input:** You provide a source PDF and an Excel file containing your list (e.g., a list of employees or invoice numbers).
+2.  **Selection:** You select the specific column in the Excel file that matches the text present in the PDF pages.
+3.  **Process:** The app scans every page of the PDF. If a value from your Excel list is found in the text of a page, that page is captured.
+4.  **Output:** A new PDF is generated in the same folder, containing only the relevant pages.
+
+---
+
+## 💻 Installation (For Developers)
+If you want to run the source code:
+
+1. Clone the repo:
+   ```bash
+   git clone [https://github.com/YourUsername/EXPDF-Filter.git](https://github.com/YourUsername/EXPDF-Filter.git)
