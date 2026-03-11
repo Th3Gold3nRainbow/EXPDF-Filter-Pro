@@ -42,4 +42,4 @@ If you want to run the source code:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/Th3Gold3nRainbow/EXPDF-Filter-Pro.git
+   git clone [https://github.com/Th3Gold3nRainbow/EXPDF-Filter-Pro.git](https://github.com/Th3Gold3nRainbow/EXPDF-Filter-Pro.git)
